@@ -90,4 +90,15 @@ function calculateExperience() {
 }
 
 // 页面加载时计算
-document.addEventListener('DOMContentLoaded', calculateExperience); 
+document.addEventListener('DOMContentLoaded', calculateExperience);
+
+// 添加动态年份设置函数
+function setCurrentYear() {
+    const yearElement = document.getElementById('currentYear');
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+    }
+}
+
+// 页面加载时设置年份
+document.addEventListener('DOMContentLoaded', setCurrentYear);
